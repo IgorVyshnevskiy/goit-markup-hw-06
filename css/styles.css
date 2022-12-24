@@ -455,8 +455,17 @@ footer.dark-bg {
   padding-bottom: 100px;
 }
 
+
 .foot-section {
+  /* width: calc((100% - 200px) / 3); */
+}
+
+.foot-section:nth-child(1) {
   margin-right: 120px;
+}
+
+.foot-section:nth-child(2) {
+  margin-right: 80px;
 }
 
 .foot-flex {
@@ -464,7 +473,7 @@ footer.dark-bg {
 }
 
 .foot-text {
-  width: 264px;
+  max-width: 264px;
 }
 
 .foot-logo {
@@ -485,7 +494,7 @@ footer.dark-bg {
 }
 
 .foot-social-media {
-  width: 208px;
+  max-width: 208px;
 }
 
 .list-container > .foot-social-item {
@@ -507,6 +516,12 @@ footer.dark-bg {
 .foot-link:hover,
 .foot-link:focus {
   background-color: var(--green);
+}
+
+.subscibe-section {
+  display: flex;
+  align-items: center;
+  min-width: 456px;
 }
 
 /* ------- MODAL ------- */
@@ -540,10 +555,9 @@ footer.dark-bg {
   transform: translate(-50%, -50%) scale(1);
 
   width: 408px;
-  height: 576px;
   padding: 24px;
 
-  background-color: #fff;
+  background-color: #FCFCFC;
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -553,6 +567,7 @@ footer.dark-bg {
   width: 24px;
   height: 24px;
   margin-left: auto;
+  margin-bottom: 24px;
 
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
@@ -569,6 +584,52 @@ footer.dark-bg {
   background-color: var(--primary-brand);
   border: 1px solid transparent;
   fill: #fff;
+}
+
+.modal-intro {
+  display: block;
+  text-align: center;
+  margin-bottom: 14px;
+
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--dark);
+}
+
+.form {
+  width: 100%;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.field-input {
+  font-family: inherit;
+  font-size: inherit;
+
+  padding: 12px 20px;
+  margin: 0;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  color: var(--text);
+
+}
+
+.field-label {
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.33;
+  color: var(--sublin-text);
+}
+
+.modal-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 22px 66px;
 }
 
 /* ------- OVERLAY FOR PORTFOLIO ------- */
