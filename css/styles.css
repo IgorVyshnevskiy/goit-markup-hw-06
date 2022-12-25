@@ -537,21 +537,24 @@ footer.dark-bg {
 }
 
 .foot-input {
-  max-width: 250px;
   margin: 0;
-  padding: 8px 16px;
+  padding: 7px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+  outline: none;
+
   background-color: transparent;
   color: var(--accent);
-  outline: none;
+
+  line-height: 2;
+  font-size: 12px;
+  font-family: inherit;
+  letter-spacing: 0.04em;
+
 }
 
 .foot-input::placeholder {
   color: rgba(255, 255, 255, 0.6);
-  font-family: inherit;
-  font-size: 12px;
-  line-height: 2;
 }
 
 .foot-input:focus {
@@ -564,6 +567,7 @@ footer.dark-bg {
   align-items: center;
 
   padding: 8px 24px;
+  line-height: 1.5;
   letter-spacing: 0.04em;
 }
 
