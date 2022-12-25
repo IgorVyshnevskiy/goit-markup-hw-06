@@ -600,12 +600,28 @@
               type="text"
               name="user-name"
               id="name"
-              placeholder="named Name"
+              placeholder="John Jonny Jameson"
+              required
             />
+            <span class="modal-icon"
+              ><svg class="input-icon" width="12" height="12">
+                <use href="./images/svg/sprate.svg#icon-person"></use></svg
+            ></span>
           </div>
           <div class="field">
             <label class="field-label" for="tel">Phone</label>
-            <input class="field-input" type="tel" name="user-phone" id="tel" />
+            <input
+              class="field-input"
+              type="tel"
+              name="user-phone"
+              id="tel"
+              placeholder="+(123)456789"
+              required
+            />
+            <span class="modal-icon"
+              ><svg width="13" height="13">
+                <use href="./images/svg/sprate.svg#icon-phone"></use></svg
+            ></span>
           </div>
           <div class="field">
             <label class="field-label" label for="mail">Email</label>
@@ -614,17 +630,40 @@
               type="email"
               name="user-email"
               id="mail"
+              placeholder="your.email@gmail.com"
+              required
             />
+            <span class="modal-icon"
+              ><svg width="15" height="12">
+                <use href="./images/svg/sprate.svg#icon-mail"></use></svg
+            ></span>
           </div>
           <div class="field">
             <label class="field-label" for="comment">Comment</label>
-            <textarea name="comment" id="comment" rows="10"></textarea>
+            <textarea
+              class="field-input field-textarea"
+              name="comment"
+              id="comment"
+              rows="8"
+              placeholder="Text input"
+            ></textarea>
           </div>
-          <input type="checkbox" name="policy" id="policy" />
-          <label for="policy"
-            >I accept the terms and conditions of the
-            <a href="">Privacy Policy</a></label
-          >
+          <label class="field-label check-label">
+            <input
+              class="checkbox secret-name"
+              type="checkbox"
+              name="policy"
+              required
+            />
+            <span id="policy" class="checkbox-icon"
+              ><svg class="policy-icon" width="10" height="8">
+                <use href="./images/svg/sprate.svg#icon-checkbox"></use></svg
+            ></span>
+            <p>
+              I accept the terms and conditions of the
+              <a class="modal-policy" href="">Privacy Policy</a>
+            </p>
+          </label>
           <button class="btn btn-primary modal-btn" type="submit">Send</button>
         </form>
       </div>

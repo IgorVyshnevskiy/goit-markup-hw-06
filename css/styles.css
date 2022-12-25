@@ -377,11 +377,13 @@ p {
 .btn-primary {
   border: transparent;
 
+  letter-spacing: 0.04em;
+
   color: var(--primary-bg-color);
   background-color: var(--primary-brand);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-  transition: bacground-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -550,7 +552,6 @@ footer.dark-bg {
   font-size: 12px;
   font-family: inherit;
   letter-spacing: 0.04em;
-
 }
 
 .foot-input::placeholder {
@@ -650,16 +651,22 @@ footer.dark-bg {
 }
 
 .field {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   margin-bottom: 8px;
 }
 
+.field:nth-child(4) {
+  margin-bottom: 16px;
+}
+
 .field-input {
   font-family: inherit;
-  font-size: inherit;
+  font-size: 12px;
 
-  padding: 12px 20px;
+  padding: 12px 20px 12px 38px;
   margin: 0;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -671,13 +678,89 @@ footer.dark-bg {
   font-size: 12px;
   line-height: 1.33;
   color: var(--sublin-text);
+  letter-spacing: 0.04em;
 }
 
 .modal-btn {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding: 22px 66px;
+  margin-top: 24px;
+  padding: 16px 66px;
+
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.modal-icon {
+  position: absolute;
+  top: 52%;
+  left: 19px;
+
+  fill: var(--dark);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.field-textarea {
+  padding: 8px 16px;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  resize: none;
+}
+
+.field-input::placeholder,
+.field-textarea::placeholder {
+  color: rgb(117, 117, 117, 0.5);
+}
+
+.modal-policy {
+  color: var(--primary-brand);
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-policy:hover,
+.modal-policy:focus {
+  color: #404bbf;
+  text-decoration: underline;
+}
+
+.field-input:focus + .modal-icon {
+  fill: var(--primary-brand);
+  outline-color: var(--primary-brand);
+}
+
+.check-label {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-icon {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 1.25px solid var(--dark);
+  border-radius: 2px;
+  cursor: pointer;
+
+  fill: transparent;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.policy-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.checkbox:checked + .checkbox-icon {
+  background-color: var(--primary-brand);
+  fill: var(--light);
 }
 
 /* ------- OVERLAY FOR PORTFOLIO ------- */
@@ -714,4 +797,3 @@ footer.dark-bg {
 }
 
 /* -----PART 2----- */
-
