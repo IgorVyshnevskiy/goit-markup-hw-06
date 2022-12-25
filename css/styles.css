@@ -748,7 +748,14 @@ footer.dark-bg {
 
   fill: transparent;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+}
+
+.checkbox:checked + .checkbox-icon {
+  border: 1.25px solid var(--primary-brand);
+  background-color: var(--primary-brand);
+  fill: var(--light);
 }
 
 .policy-icon {
@@ -756,11 +763,6 @@ footer.dark-bg {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.checkbox:checked + .checkbox-icon {
-  background-color: var(--primary-brand);
-  fill: var(--light);
 }
 
 /* ------- OVERLAY FOR PORTFOLIO ------- */
