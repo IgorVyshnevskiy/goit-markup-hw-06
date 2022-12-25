@@ -1,1 +1,1 @@
-# goit-markup-hw-06
+# Finished homework for the 6th week.
